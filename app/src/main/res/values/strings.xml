@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CityHarm</string>
+    <string name="dummy_content">CityHarm</string>
+    <string name="msgLoginErro">Erro ao efetuar login</string>
+    <string name="edtLogin">User</string>
+    <string name="edtSenha">Password</string>
 </resources>
