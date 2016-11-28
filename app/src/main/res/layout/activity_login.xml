@@ -15,7 +15,8 @@
         android:id="@+id/edtLogin"
         android:layout_gravity="center_horizontal"
         android:hint="@string/edtLogin"
-        android:inputType="text" />
+        android:inputType="text"
+        />
 
     <EditText
         android:layout_width="match_parent"

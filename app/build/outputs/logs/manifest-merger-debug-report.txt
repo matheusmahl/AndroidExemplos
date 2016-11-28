@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\CityHarm\app\src\main\AndroidManifest.xml:2:1-23:12
+ADDED from C:\CityHarm\app\src\main\AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from C:\CityHarm\app\src\main\AndroidManifest.xml:3:11-40
 		INJECTED from C:\CityHarm\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from C:\CityHarm\app\src\main\AndroidManifest.xml:2:1-23:12
 		INJECTED from C:\CityHarm\app\src\main\AndroidManifest.xml
 		INJECTED from C:\CityHarm\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\CityHarm\app\src\main\AndroidManifest.xml:5:5-21:19
+ADDED from C:\CityHarm\app\src\main\AndroidManifest.xml:5:5-22:19
 MERGED from [com.android.support:appcompat-v7:24.2.0] C:\CityHarm\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:24.2.0] C:\CityHarm\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-compat:24.2.0] C:\CityHarm\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\AndroidManifest.xml:25:5-20
@@ -129,6 +129,10 @@ activity#br.edu.pdm.cityharm.LoginActivity_
 ADDED from C:\CityHarm\app\src\main\AndroidManifest.xml:18:9-19:20
 	android:name
 		ADDED from C:\CityHarm\app\src\main\AndroidManifest.xml:18:19-49
+activity#br.edu.pdm.cityharm.principal.PrincipalActivity
+ADDED from C:\CityHarm\app\src\main\AndroidManifest.xml:20:9-21:20
+	android:name
+		ADDED from C:\CityHarm\app\src\main\AndroidManifest.xml:20:19-62
 uses-sdk
 INJECTED from C:\CityHarm\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:24.2.0] C:\CityHarm\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\AndroidManifest.xml:21:5-23:78

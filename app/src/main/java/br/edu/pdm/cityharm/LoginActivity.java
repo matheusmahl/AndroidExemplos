@@ -1,5 +1,6 @@
 package br.edu.pdm.cityharm;
 
+import android.content.Intent;
 import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +13,10 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+
+import br.edu.pdm.cityharm.helper.DatabaseHelper;
+import br.edu.pdm.cityharm.model.Usuario;
+import br.edu.pdm.cityharm.principal.PrincipalActivity;
 
 
 @EActivity(R.layout.activity_login)
@@ -43,19 +48,19 @@ public class LoginActivity extends AppCompatActivity {
 
   @Click({R.id.btnSobre, R.id.btnLogin})
   public void onClick(View view) {
-   // DatabaseHelper dh = new DatabaseHelper(this);
+    DatabaseHelper databaseHelper = new DatabaseHelper(this);
 
     switch (view.getId()) {
       case R.id.btnLogin:
         // recuperar valores da tela
         String strLogin = edtLogin.getText().toString();
         String strSenha = edtSenha.getText().toString();
-     //   Usuario u = dh.getUsuarioByLoginSenha(strLogin, strSenha);
-       // if (u != null) {
-        if (strLogin != "") {
-         // Intent it = new Intent(this, PrincipalActivity.class);
-       //   it.putExtra("usuario", u);
-        //  startActivity(it);
+        Usuario usuario = databaseHelper.getUsuarioByLoginSenha(strLogin, strSenha);
+        if (usuario != null) {
+       // if (strLogin != "") {
+          Intent it = new Intent(this, PrincipalActivity.class);
+          it.putExtra("usuario", usuario);
+          startActivity(it);
           finish();
         } else {
           edtLogin.setText("");
