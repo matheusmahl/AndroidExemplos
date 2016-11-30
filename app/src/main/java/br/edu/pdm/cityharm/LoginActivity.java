@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
   protected ImageButton btnBluetooth;
   @ViewById
   protected ImageButton btnAcelerometro;
-  
+
 
   @Click({R.id.btnBluetooth, R.id.btnAcelerometro})
   public void onClick(View view) {
@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         break;
 
       case R.id.btnAcelerometro:
-        Intent it2 = new Intent(this, PrincipalActivity_.class);
+        Intent it2 = new Intent(this, AcelerometroActivity_.class);
         startActivity(it2);
         finish();
         break;

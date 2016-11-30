@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textView2"
-            android:layout_weight="0.12"/>
+            android:layout_weight="0.25"/>
 
         <Button
             android:layout_width="match_parent"

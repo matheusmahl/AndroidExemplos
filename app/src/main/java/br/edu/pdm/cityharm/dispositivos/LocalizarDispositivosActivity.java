@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -34,11 +35,11 @@ public class LocalizarDispositivosActivity extends AppCompatActivity {
     adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
     listView2.setAdapter(adapter);
 
-    BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
-    btAdapter.startDiscovery();
-
     IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
     registerReceiver(receiver, filter);
+
+    BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
+    Log.d("Discovery - ","" + btAdapter.startDiscovery());
   }
 
   @ItemClick({R.id.listView2})
@@ -78,6 +79,7 @@ public class LocalizarDispositivosActivity extends AppCompatActivity {
       if (BluetoothDevice.ACTION_FOUND.equals(action)) {
         BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
         adapter.add(device.getName() + "\n" + device.getAddress());
+        adapter.notifyDataSetChanged();
       }
     }
   };

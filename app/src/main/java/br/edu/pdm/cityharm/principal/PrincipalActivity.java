@@ -44,7 +44,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
   @Click({R.id.btnAbreComunicacao})
   public void onClick(View view) {
-    textView.clearComposingText();
+    textView.setText("");
     BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
     if (btAdapter == null) {
       textView.append("Que pena! Hardware Bluetooth não está funcionando :(\n");
